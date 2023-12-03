@@ -9,7 +9,6 @@ const { checkAuthRole } = require("../../middlewares/checkAuthRole");
 
 module.exports.UsersAPI = (app) => {
   router
-    // checkAuth, checkAuthRole(['delta']),
     .get("/", checkAuth, checkAuthRole(['delta']), cors(), UsersController.getUsers)
     .get("/user", checkAuth, cors(), UsersController.getUserInfo)
     .get("/:id", cors(), UsersController.getUser)
