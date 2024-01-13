@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
-// module.exports.userSchema = new Schema({
-const userSchema = new mongoose.Schema(
+// module.exports.adminSchema = new Schema({
+const adminSchema = new mongoose.Schema(
   {
     first_name: {
       type: String,
@@ -16,12 +16,13 @@ const userSchema = new mongoose.Schema(
       required: [true, `The lastname is required`],
     },
     age: {
-        type: Number,
+        type: String,
         required: [true, `The age is required, +18`],
     },
     number_id: {
-      type: Number,
+      type: String,
       required: [true, `Your ID Number is required, to check information`],
+      unique: true,
     },
     email: {
       type: String,
@@ -34,16 +35,16 @@ const userSchema = new mongoose.Schema(
     },
     role: {
       type: String,
-      default: "user",
+      default: "delta",
     }
   },
   {
     strict: false,
-    // collection: "users",
+    // collection: "admins",
     timestamps: true, // Permite los campos de createdAt, updatedAt
     versionKey: false,
   }
 );
 
-const UsersLlegueleCR = mongoose.model("users", userSchema);
-module.exports = UsersLlegueleCR
+const AdminsLlegueleCR = mongoose.model("admins", adminSchema);
+module.exports = AdminsLlegueleCR

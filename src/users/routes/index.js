@@ -19,3 +19,9 @@ module.exports.UsersAPI = (app) => {
 
   app.use("/lleguele/cr/api/users", router);
 };
+
+// VER SIGUIENTE VIDEO DEPLOY: FRONT -> NETLIFY || BACK -> RENDER
+// https://www.youtube.com/watch?v=AjaGmTVBIfI
+
+// VER SIGUIENTE SUBIR IMAGENES CON MULTER Y SHARP
+// https://www.youtube.com/watch?v=DahdecVt3cM

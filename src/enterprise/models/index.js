@@ -75,10 +75,12 @@ const userSchema = new mongoose.Schema(
   },
   {
     strict: false,
-    collection: "enterprises",
+    // collection: "enterprises",
     timestamps: true, // Permite los campos de createdAt, updatedAt
     versionKey: false,
   }
 );
 
-module.exports = mongoose.model("enterprises", userSchema);
+// EnterprisesLlegueleCR
+const EnterprisesLlegueleCR = mongoose.model("enterprises", userSchema);
+module.exports = EnterprisesLlegueleCR;
